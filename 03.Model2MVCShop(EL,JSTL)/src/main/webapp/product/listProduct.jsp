@@ -203,7 +203,7 @@
 		<c:set var="i" value="${ i+1 }" />
 		<tr class="ct_list_pop">
 			<td align="center">${ i }</td>
-			<td></td>
+			<td></td>			
 			<c:choose>
 				<c:when test = "${menu=='manage'}">
 				<td align="left"><a href="/updateProductView.do?prodNo=${ product.prodNo }&menu=${ menu }">${ product.prodName }</a></td>
@@ -246,7 +246,7 @@
 			<% }else{ %>
 					<a href="javascript:fncGetProductList('<%=resultPage.getEndUnitPage()+1%>')">¿Ã»ƒ ¢∫</a>
 			<% } %> --%>
-		<jsp:include page="../common/pageNavigator.jsp"/>	
+		<jsp:include page="../common/pageNavigator.jsp?uri=${ uri }"/>
 			
     	</td>
 	</tr>

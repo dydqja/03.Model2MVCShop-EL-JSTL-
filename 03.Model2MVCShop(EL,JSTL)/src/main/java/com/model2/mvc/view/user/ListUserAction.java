@@ -46,6 +46,7 @@ public class ListUserAction extends Action {
 		request.setAttribute("list", map.get("list"));
 		request.setAttribute("resultPage", resultPage);
 		request.setAttribute("search", search);
+		request.setAttribute("uri",request.getRequestURI());
 		
 		return "forward:/user/listUser.jsp";
 	}

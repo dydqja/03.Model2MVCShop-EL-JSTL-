@@ -147,7 +147,7 @@ public class ProductDAO {
 		PreparedStatement pStmt = con.prepareStatement(sql);
 		pStmt.setString(1, product.getProdName());
 		pStmt.setString(2, product.getProdDetail());
-		pStmt.setString(3, product.getManuDate());
+		pStmt.setString(3, product.getManuDate().replaceAll("-",""));
 		pStmt.setInt(4, product.getPrice());
 		pStmt.setString(5, product.getFileName());
 		pStmt.setInt(6, product.getProdNo());	

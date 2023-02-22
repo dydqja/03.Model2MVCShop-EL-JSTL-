@@ -17,9 +17,10 @@ public class ListProductAction extends Action {
 
 	@Override
 	public String execute(	HttpServletRequest request,
-												HttpServletResponse response) throws Exception {
+												HttpServletResponse response) throws Exception {		
 		
 		System.out.println("1.여기는 ListProductAction 내부");
+		System.out.println(request.getRequestURI());
 		
 		System.out.println("ListProductAction :: menu값은 ==========");
 		System.out.println(request.getParameter("menu"));		
@@ -60,6 +61,7 @@ public class ListProductAction extends Action {
 		request.setAttribute("resultPage", resultPage);
 		request.setAttribute("search", search);
 		request.setAttribute("menu",request.getParameter("menu"));
+		request.setAttribute("uri",request.getRequestURI());
 					
 		return "forward:/product/listProduct.jsp";		
 	}
